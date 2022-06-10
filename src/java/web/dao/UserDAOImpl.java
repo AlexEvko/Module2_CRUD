@@ -32,4 +32,11 @@ public class UserDAOImpl implements UserDAO{
     public User getUser(Long id) {
         return entityManager.find(User.class, id);
     }
+
+    @Override
+    public void deleteUser(Long id) {
+        entityManager.createQuery("DELETE FROM User user WHERE user.id = :userId")
+                .setParameter("userId", id)
+                .executeUpdate();
+    }
 }

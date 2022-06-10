@@ -49,4 +49,11 @@ public class UserController {
 
         return "user-info";
     }
+
+    @RequestMapping("/deleteUser")
+    public String deleteUser(@RequestParam("usId") Long id){
+        userService.deleteUser(id);
+
+        return "redirect:/";
+    }
 }

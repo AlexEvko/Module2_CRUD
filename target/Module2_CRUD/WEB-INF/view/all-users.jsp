@@ -23,6 +23,10 @@
              <c:param name="usId" value="${us.id}" />
          </c:url>
 
+         <c:url value="/deleteUser" var="deleteButton">
+             <c:param name="usId" value="${us.id}" />
+         </c:url>
+
          <tr>
              <td>${us.firstName}</td>
              <td>${us.lastName}</td>
@@ -31,6 +35,10 @@
              <td>
                  <input type="button" value="Update"
                         onclick="window.location.href = '${updateButton}'"/>
+             </td>
+             <td>
+                 <input type="button" value="Delete"
+                        onclick="window.location.href = '${deleteButton}'"/>
              </td>
          </tr>
      </c:forEach>
