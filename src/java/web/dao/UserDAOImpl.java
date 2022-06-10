@@ -21,7 +21,11 @@ public class UserDAOImpl implements UserDAO{
 
     @Override
     public void saveUser(User user) {
-        entityManager.persist(user);
+        if (user.getId() != null){
+            entityManager.merge(user);
+        }else {
+            entityManager.persist(user);
+        }
     }
 
     @Override
