@@ -42,7 +42,10 @@ public class UserController {
         return "redirect:/";
     }
     @RequestMapping("/updateInfo")
-    public String updateUser(@RequestParam("usId") int id, Model model){
+    public String updateUser(@RequestParam("usId") Long id, Model model){
+
+        User user = userService.getUser(id);
+        model.addAttribute("user",user);
 
         return "user-info";
     }

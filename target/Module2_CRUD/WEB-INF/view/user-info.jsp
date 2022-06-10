@@ -6,6 +6,9 @@
 <br>
 
 <form:form action="saveUser" modelAttribute="user">
+
+    <form:hidden path="id"/>
+
     Name <form:input path="firstName"/>
     <br><br>
     Surname <form:input path="lastName"/>

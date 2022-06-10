@@ -15,10 +15,10 @@
          <th>Operations</th>
      </tr>
      <c:forEach var="us" items="${allUs}">
+
 <%--         снизу что то произошло--%>
-         <c:url var="updateButton">
-             <value>/updateInfo</value>
-             <c: param name="usId" value="${us.id}"
+         <c:url var="updateButton"><value>/updateInfo</value>
+             <c:param name="usId" value="${us.id}"/>
          </c:url>
 
          <tr>
