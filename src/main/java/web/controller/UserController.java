@@ -6,7 +6,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import web.dao.UserDAO;
 import web.model.User;
 import web.service.UserService;
 
@@ -26,7 +25,7 @@ public class UserController {
         List<User> allUsers = userService.getAllUsers();
         model.addAttribute("allUs",allUsers);
 
-        return  "all-users";
+        return "all-users";
     }
     @RequestMapping("/addNewUser")
     public String addNewUser(Model model){
